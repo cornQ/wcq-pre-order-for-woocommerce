@@ -7,7 +7,7 @@ Version: 2.3
 Requires at least: 6.7.2
 Author: Md. Sohanur Rahman Sakib
 Author URI: https://sakibsti.me/
-License: GPL2
+License: GPLv3 or later
 */
 
 // Exit if accessed directly.

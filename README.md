@@ -1,6 +1,6 @@
 # Pre-Order for WooCommerce
 
-**Plugin URI:** [https://github.com/sakibstime/wooq-preorder](https://github.com/sakibstime/wooq-preorder)  
+**Plugin URI:** [https://github.com/cornQ/wooq-preorder](https://github.com/cornQ/wooq-preorder)  
 **Author:** [Md. Sohanur Rahman Sakib](https://sakibsti.me/)  
 **Version:** 2.3  
 **Requires at least:** WordPress 6.7.2  

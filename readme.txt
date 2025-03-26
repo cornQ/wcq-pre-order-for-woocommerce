@@ -94,4 +94,4 @@ Save issue fixed
 
 Developed by [Md. Sohanur Rahman Sakib](https://sakibsti.me/)
 
-GitHub: https://github.com/sakibstime/wooq-preorder
+GitHub: https://github.com/cornQ/wooq-preorder

@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Pre-Order for WooCommerce
-Plugin URI: https://github.com/sakibstime
+Plugin URI: https://github.com/cornQ/wooq-preorder
 Description: Allows products to be marked for pre-ordering. When enabled, a "Pre-Order" button appears on the product page and orders made using it are set to a custom "Pre-Ordered" status.
 Version: 2.3
 Requires at least: 6.7.2

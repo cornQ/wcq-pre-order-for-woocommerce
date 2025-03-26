@@ -1,4 +1,4 @@
-=== Pre-Order for WooCommerce ===
+=== WCQ Pre-Order for WooCommerce ===
 Contributors: sakibstime, cornq  
 Donate link: https://buymeacoffee.com/sakibstime
 Tags: preorder, woocommerce, backorder, pre-order, pre-order button  
@@ -9,11 +9,11 @@ Requires PHP: 8.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Allows marking products for pre-order. Adds a “Pre-Order” button and sets orders to a custom “Pre-Ordered” status.
+WCQ Pre-Order for WooCommerce allows marking products for pre-order. Adds a “Pre-Order” button and sets orders to a custom “Pre-Ordered” status.
 
 == Description ==
 
-**Pre-Order for WooCommerce** lets you enable pre-orders for any product in your WooCommerce store. Whether you're launching a new item, handling restocks, or allowing early purchases, this plugin gives your customers the ability to place orders even when products are out of stock.
+**WCQ Pre-Order for WooCommerce** lets you enable pre-orders for any product in your WooCommerce store. Whether you're launching a new item, handling restocks, or allowing early purchases, this plugin gives your customers the ability to place orders even when products are out of stock.
 
 Easily enable pre-order from the Inventory tab of your product. Once enabled, the default "Add to Cart" button is replaced with a "Pre-Order" button. Orders placed with pre-order items will automatically receive a new status: **Pre-Ordered**.
 

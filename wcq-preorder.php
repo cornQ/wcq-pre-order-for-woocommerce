@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Pre-Order for WooCommerce
+Plugin Name: WCQ Pre-Order for WooCommerce
 Plugin URI: https://github.com/cornQ/wcq-preorder
 Description: Allows products to be marked for pre-ordering. When enabled, a "Pre-Order" button appears on the product page and orders made using it are set to a custom "Pre-Ordered" status.
 Version: 2.3

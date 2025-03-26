@@ -1,4 +1,4 @@
-# Pre-Order for WooCommerce
+# WCQ Pre-Order for WooCommerce
 
 **Plugin URI:** [https://github.com/cornQ/wcq-preorder](https://github.com/cornQ/wcq-preorder)  
 **Author:** [Md. Sohanur Rahman Sakib](https://sakibsti.me/)  
@@ -12,7 +12,7 @@
 
 ## 📦 Description
 
-**Pre-Order for WooCommerce** allows you to mark any product as pre-order from the Inventory tab on the product edit screen. When enabled, the standard **Add to Cart** button is replaced with a **Pre-Order** button, and orders are automatically set to a custom status: **Pre-Ordered**.
+**WCQ Pre-Order for WooCommerce** allows you to mark any product as pre-order from the Inventory tab on the product edit screen. When enabled, the standard **Add to Cart** button is replaced with a **Pre-Order** button, and orders are automatically set to a custom status: **Pre-Ordered**.
 
 Whether you're launching new products or accepting purchases for out-of-stock items, this plugin helps you capture more orders and improve user experience.
 

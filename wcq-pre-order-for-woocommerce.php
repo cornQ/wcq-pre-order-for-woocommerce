@@ -3,7 +3,7 @@
 Plugin Name: WCQ Pre-Order for WooCommerce
 Plugin URI: https://github.com/cornQ/wcq-preorder
 Description: Allows products to be marked for pre-ordering. When enabled, a "Pre-Order" button appears on the product page and orders made using it are set to a custom "Pre-Ordered" status.
-Version: 2.3
+Version: 2.4
 Requires at least: 6.7.2
 Author: Md. Sohanur Rahman Sakib
 Author URI: https://sakibsti.me/
@@ -22,13 +22,13 @@ function wcqpopskb_preorder_product_field() {
     wp_nonce_field( 'wcq_preorder_save', 'wcq_preorder_nonce' );
     woocommerce_wp_checkbox( array(
         'id'          => '_is_preorder',
-        'label'       => __( 'Enable Pre-Order', 'wcq-preorder' ),
-        'description' => __( 'Enable this product for pre-ordering.', 'wcq-preorder' ),
+        'label'       => __( 'Enable Pre-Order', 'wcq-pre-order-for-woocommerce' ),
+        'description' => __( 'Enable this product for pre-ordering.', 'wcq-pre-order-for-woocommerce' ),
     ) );
     woocommerce_wp_text_input( array(
         'id'                => '_preorder_stock_quantity',
-        'label'             => __( 'Pre-Order Stock Quantity', 'wcq-preorder' ),
-        'description'       => __( 'Enter the quantity override for pre-order products. Leave blank to use default value (9999).', 'wcq-preorder' ),
+        'label'             => __( 'Pre-Order Stock Quantity', 'wcq-pre-order-for-woocommerce' ),
+        'description'       => __( 'Enter the quantity override for pre-order products. Leave blank to use default value (9999).', 'wcq-pre-order-for-woocommerce' ),
         'desc_tip'          => true,
         'type'              => 'number',
         'custom_attributes' => array( 'min' => 0 ),
@@ -74,7 +74,7 @@ add_action( 'woocommerce_process_product_meta', 'wcqpopskb_preorder_save_product
  */
 function wcqpopskb_preorder_change_button_text( $text, $product ) {
     if ( 'yes' === get_post_meta( $product->get_id(), '_is_preorder', true ) ) {
-        return __( 'Pre-Order', 'wcq-preorder' );
+        return __( 'Pre-Order', 'wcq-pre-order-for-woocommerce' );
     }
     return $text;
 }
@@ -108,7 +108,7 @@ add_filter( 'woocommerce_product_is_in_stock', 'wcqpopskb_preorder_force_in_stoc
  */
 function wcqpopskb_preorder_custom_availability_text( $availability, $product ) {
     if ( 'yes' === get_post_meta( $product->get_id(), '_is_preorder', true ) ) {
-        $availability['availability'] = __( 'Pre-Order Available', 'wcq-preorder' );
+        $availability['availability'] = __( 'Pre-Order Available', 'wcq-pre-order-for-woocommerce' );
     }
     return $availability;
 }
@@ -119,13 +119,13 @@ add_filter( 'woocommerce_get_availability', 'wcqpopskb_preorder_custom_availabil
  */
 function wcqpopskb_register_preorder_status() {
     register_post_status( 'wc-pre-ordered', array(
-        'label'                     => _x( 'Pre-Ordered', 'Order status', 'wcq-preorder' ),
+        'label'                     => _x( 'Pre-Ordered', 'Order status', 'wcq-pre-order-for-woocommerce' ),
         'public'                    => true,
         'exclude_from_search'       => false,
         'show_in_admin_all_list'    => true,
         'show_in_admin_status_list' => true,
         // translators: %s: number of products
-        'label_count'               => _n_noop( 'Pre-Ordered <span class="count">(%s)</span>', 'Pre-Ordered <span class="count">(%s)</span>', 'wcq-preorder' ),
+        'label_count'               => _n_noop( 'Pre-Ordered <span class="count">(%s)</span>', 'Pre-Ordered <span class="count">(%s)</span>', 'wcq-pre-order-for-woocommerce' ),
     ) );
 }
 add_action( 'init', 'wcqpopskb_register_preorder_status' );
@@ -138,7 +138,7 @@ function wcqpopskb_add_preorder_status( $order_statuses ) {
     foreach ( $order_statuses as $key => $status ) {
         $new_order_statuses[ $key ] = $status;
         if ( 'wc-processing' === $key ) {
-            $new_order_statuses['wc-pre-ordered'] = _x( 'Pre-Ordered', 'Order status', 'wcq-preorder' );
+            $new_order_statuses['wc-pre-ordered'] = _x( 'Pre-Ordered', 'Order status', 'wcq-pre-order-for-woocommerce' );
         }
     }
     return $new_order_statuses;
@@ -161,7 +161,7 @@ function wcqpopskb_set_order_status_preorder( $order_id ) {
         }
     }
     if ( $is_preorder_order ) {
-        $order->update_status( 'wc-pre-ordered', __( 'Order placed as pre-order.', 'wcq-preorder' ) );
+        $order->update_status( 'wc-pre-ordered', __( 'Order placed as pre-order.', 'wcq-pre-order-for-woocommerce' ) );
     }
 }
 add_action( 'woocommerce_checkout_order_processed', 'wcqpopskb_set_order_status_preorder', 10, 1 );
@@ -182,7 +182,7 @@ function wcqpopskb_maybe_update_order_status_to_pre_ordered( $order_id ) {
         }
     }
     if ( $is_preorder_order ) {
-        $order->update_status( 'wc-pre-ordered', __( 'Order placed as pre-order.', 'wcq-preorder' ) );
+        $order->update_status( 'wc-pre-ordered', __( 'Order placed as pre-order.', 'wcq-pre-order-for-woocommerce' ) );
     }
 }
 add_action( 'woocommerce_thankyou', 'wcqpopskb_maybe_update_order_status_to_pre_ordered', 20, 1 );
@@ -242,7 +242,7 @@ add_filter( 'woocommerce_product_get_stock_quantity', 'wcqpopskb_preorder_overri
 function wcqpopskb_preorder_cart_warning( $item_name, $cart_item, $cart_item_key ) {
     $product = $cart_item['data'];
     if ( is_object( $product ) && 'yes' === get_post_meta( $product->get_id(), '_is_preorder', true ) ) {
-        $item_name .= '<p style="color: red; font-weight: bold; margin: 5px 0 0;">' . esc_html__( 'Warning: This product is pre-ordered.', 'wcq-preorder' ) . '</p>';
+        $item_name .= '<p style="color: red; font-weight: bold; margin: 5px 0 0;">' . esc_html__( 'Warning: This product is pre-ordered.', 'wcq-pre-order-for-woocommerce' ) . '</p>';
     }
     return $item_name;
 }
@@ -305,9 +305,9 @@ function wcqpopskb_preorder_order_item_meta( $item_id, $item, $order, $plain_tex
     $product = $item->get_product();
     if ( $product && 'yes' === get_post_meta( $product->get_id(), '_is_preorder', true ) ) {
         if ( $plain_text ) {
-            echo "\n" . esc_html__( 'This product is pre-ordered.', 'wcq-preorder' );
+            echo "\n" . esc_html__( 'This product is pre-ordered.', 'wcq-pre-order-for-woocommerce' );
         } else {
-            echo '<p style="color: red; font-weight: bold; margin: 0;">' . esc_html__( 'This product is pre-ordered.', 'wcq-preorder' ) . '</p>';
+            echo '<p style="color: red; font-weight: bold; margin: 0;">' . esc_html__( 'This product is pre-ordered.', 'wcq-pre-order-for-woocommerce' ) . '</p>';
         }
     }
 }

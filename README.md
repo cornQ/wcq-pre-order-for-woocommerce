@@ -2,7 +2,7 @@
 
 **Plugin URI:** [https://github.com/cornQ/wcq-preorder](https://github.com/cornQ/wcq-preorder)  
 **Author:** [Md. Sohanur Rahman Sakib](https://sakibsti.me/)  
-**Version:** 2.3  
+**Version:** 2.4  
 **Requires at least:** WordPress 6.7.2  
 **Tested up to:** Latest WordPress  
 **License:** GPLv3 or later <br>

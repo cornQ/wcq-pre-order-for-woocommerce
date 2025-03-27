@@ -4,8 +4,8 @@ Donate link: https://buymeacoffee.com/sakibstime
 Tags: preorder, woocommerce, backorder, pre-order, pre-order button  
 Requires at least: 6.7.2  
 Tested up to: 6.7.2  
-Stable tag: 2.3  
-Requires PHP: 8.2  
+Stable tag: 2.4
+Requires PHP: 8.1  
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -58,6 +58,9 @@ Any order containing a pre-order product will be marked with a custom status: **
 
 == Changelog ==
 
+= 2.4 =
+Mismatched text domain fixed
+
 = 2.3 =
 Save issue fixed
 
@@ -75,8 +78,8 @@ Save issue fixed
 
 == Upgrade Notice ==
 
-= 2.3 =
-Save issue fixed
+= 2.4 =
+Mismatched text domain fixed
 
 == Screenshots ==
 

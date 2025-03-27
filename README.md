@@ -1,6 +1,6 @@
 # WCQ Pre-Order for WooCommerce
 
-**Plugin URI:** [https://github.com/cornQ/wcq-preorder](https://github.com/cornQ/wcq-preorder)  
+**Plugin URI:** [https://github.com/cornQ/wcq-pre-order-for-woocommerce](https://github.com/cornQ/wcq-pre-order-for-woocommerce)  
 **Author:** [Md. Sohanur Rahman Sakib](https://sakibsti.me/)  
 **Version:** 2.4  
 **Requires at least:** WordPress 6.7.2  
@@ -56,6 +56,9 @@ When customers view this product:
 ---
 
 ## 🚧 Changelog
+
+### 2.4
+- Mismatched text domain fixed
 
 ### 2.3 
 - Save issue fixed

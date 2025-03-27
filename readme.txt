@@ -97,4 +97,4 @@ Mismatched text domain fixed
 
 Developed by [Md. Sohanur Rahman Sakib](https://sakibsti.me/)
 
-GitHub: https://github.com/cornQ/wcq-preorder
+GitHub: https://github.com/cornQ/wcq-pre-order-for-woocommerce
